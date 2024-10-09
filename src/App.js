@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Form from './Components/form';
 
 function App() {
+  const [amount,setAmout] = useState(0)
+  const [months,setMonths] = useState(0)
+  const [monthly,setMonthly] = useState(0)
+  const [annualRate,setAnnualRate] = useState(0)
+  const [monthlyRate,setMonthlyRate] = useState(0)
+
+  function onSubmitForm(event){
+    event.preventDefault();
+    console.log("hola")
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form onSubmit={onSubmitForm}></Form>
     </div>
   );
 }
