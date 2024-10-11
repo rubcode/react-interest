@@ -9,8 +9,6 @@ const FormStyled = styled.form`
     align-items: flex-start;
     flex-direction: column;
     gap: 1.5rem;
-    padding-inline:2rem;
-    padding-block: 2rem;
 
     .title{
         margin: 0;
@@ -32,28 +30,48 @@ const FormStyled = styled.form`
 `
 
 
-function Form({onSubmit}) {
+function Form({onSubmit,amount,months,monthly,annualRate,monthlyRate,setAmount,setMonths,setMonthly,setAnnualRate,setMonthlyRate}) {
+    function cleanInputs(){
+        setAmount(0);
+        setMonths(0);
+        setMonthly(0);
+        setAnnualRate(0);
+        setMonthlyRate(0);
+    }
+
+    function handlerAmount(event){
+        setAmount(event.target.value);
+    }
+
+    function handlerMonth(event){
+        setMonths(event.target.value);
+    }
+
+    function handlerAnnualRate(event){
+        setAnnualRate(event.target.value)
+    }
+
     return (
         <FormStyled onSubmit={onSubmit}>
             <h1 className='title'>Calculadora Interés Compuesto</h1>
             <div className='box'>
-                <InputText type='number' name='amount' placeholder='Ingrese Monto'/>
+                <InputText type='text' name='amount' placeholder='Ingrese Monto' value={amount} onChange={handlerAmount}/>
             </div>
             <div className='box'>
-                <InputText type='number' name='months' placeholder='Ingrese Meses'/>
+                <InputText type='text' name='months' placeholder='Ingrese Meses' value={months} onChange={handlerMonth}/>
             </div>
             <div className='box'>
-                <InputText type='text' name='monthly' placeholder='Ingrese Mensualidad'/>
+                <InputText type='text' name='monthly' placeholder='Ingrese Mensualidad' value={monthly}/>
             </div>
             <div className='box'>
-                <InputText type='text' name='annualRate' placeholder='Ingrese Tasa Anual'/>
+                <InputText type='text' name='annualRate' placeholder='Ingrese Tasa Anual' value={annualRate} onChange={handlerAnnualRate}/>
             </div>
             <div className='box'>
-                <InputText type='text' name='monthlyRate' placeholder='Ingrese Tasa Mensual'/>
+                <InputText type='text' name='monthlyRate' placeholder='Ingrese Tasa Mensual' value={monthlyRate}/>
             </div>
             <div className='box'>
                 <Button text="Calcular" type="submit"></Button>
-                <ButtonContrast text="Limpiar" type="button"></ButtonContrast>
+                <ButtonContrast text="Limpiar" type="button" onClick={cleanInputs}></ButtonContrast>
             </div>
             
         </FormStyled>

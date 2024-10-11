@@ -16,10 +16,10 @@ const ButtonStyled = styled.div`
     }
 `
 
-function Button({text,link,type, className}) {
+function Button({text,link,type,className,onClick}) {
     const component = link ? "a" : "button"
     return (
-        <ButtonStyled as={component} type={type} href={link} className={className}>
+        <ButtonStyled as={component} type={type} href={link} className={className} onClick={onClick}>
             {text}
         </ButtonStyled>
     )
