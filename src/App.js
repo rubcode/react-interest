@@ -10,6 +10,8 @@ function App() {
   const [monthly,setMonthly] = useState(0)
   const [annualRate,setAnnualRate] = useState(0)
   const [monthlyRate,setMonthlyRate] = useState(0)
+  const [headers, setHeaders] = useState([])
+  const [dataInterest, setDataInterest] = useState([])
 
   useEffect(() => {
     if(months !== 0){
@@ -43,7 +45,11 @@ function App() {
             setAnnualRate={setAnnualRate}
             setMonthlyRate={setMonthlyRate}
           />
-        <BoxResponse />
+        <BoxResponse
+          headers={headers}
+          data={dataInterest}
+
+         />
       </Layout>
     </div>
   );

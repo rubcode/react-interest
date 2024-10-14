@@ -7,6 +7,7 @@ const GlobalStylesStyled = createGlobalStyle`
         --primaryColor: #2ACFCF;
         --accentColor : #003694;
         --white : #ffffef;
+        --grey: #fafafa ;
         --bodyRegular: 400 1rem Poppins;
         --bodyRegularSemiBold: 500 1.2rem Poppins;
         --titleFont: 600 1.5rem Poppins;
