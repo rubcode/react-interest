@@ -19,7 +19,22 @@ const GlobalStylesStyled = createGlobalStyle`
         font: var(--bodyRegular);
         margin: 0;
     }
-
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .title{
+        margin: 0;
+        font: var(--titleFont);
+        color: var(--primaryColor);
+        text-align: left;
+        padding-block-start: 2rem;
+        padding-inline-start: 2rem;
+    }
+    .logo{
+        width: 180px;
+    }
     @media screen and (prefers-color-scheme: light) {
         body {
             background: var(--white);

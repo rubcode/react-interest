@@ -12,23 +12,14 @@ const FormStyled = styled.form`
     flex-direction: column;
     gap: 1.5rem;
 
-    .title{
-        margin: 0;
-        font: var(--titleFont);
-        color: var(--primaryColor);
-
-    }
-
     .box{
         display: flex;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
         gap: .5rem;
-
+        width: 100%;
     }
-    label{
-        padding-inline-start: 0.5rem;
-    }
+    
 `
 
 
@@ -72,7 +63,6 @@ function Form({amount,months,monthly,annualRate,monthlyRate,setAmount,setMonths,
 
     return (
         <FormStyled ref={form} onSubmit={handlerSubmit}>
-            <h1 className='title'>Calculadora Interés Compuesto</h1>
             <div className='box'>
                 <InputText type='text' name='amount' placeholder='Ingrese Monto' value={amount} onChange={handlerAmount}/>
             </div>
