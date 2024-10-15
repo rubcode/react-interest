@@ -9,6 +9,7 @@ const InputText = styled.input`
     border-radius: 1.5rem;
     font: var(--bodyRegular);
     flex: 1;
+    width: 100%;
 `
 
 

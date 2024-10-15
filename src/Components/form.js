@@ -14,10 +14,13 @@ const FormStyled = styled.form`
 
     .box{
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: flex-start;
         gap: .5rem;
         width: 100%;
+    }
+    .box .col-2{
+        width: 50%;
     }
     
 `
@@ -67,16 +70,20 @@ function Form({amount,months,monthly,annualRate,monthlyRate,setAmount,setMonths,
                 <InputText type='text' name='amount' placeholder='Ingrese Monto' value={amount} onChange={handlerAmount}/>
             </div>
             <div className='box'>
-                <InputText type='text' name='months' placeholder='Ingrese Meses' value={months} onChange={handlerMonth}/>
+                <div className='col-2'>
+                    <InputText type='text' name='months' placeholder='Ingrese Meses' value={months} onChange={handlerMonth}/>
+                </div>
+                <div className='col-2'>
+                    <InputText type='text' name='monthly' placeholder='Mensualidad' value={monthly} readOnly/>
+                </div>
             </div>
             <div className='box'>
-                <InputText type='text' name='monthly' placeholder='Ingrese Mensualidad' value={monthly} readOnly/>
-            </div>
-            <div className='box'>
-                <InputText type='text' name='annualRate' placeholder='Ingrese Tasa Anual' value={annualRate} onChange={handlerAnnualRate}/>
-            </div>
-            <div className='box'>
-                <InputText type='text' name='monthlyRate' placeholder='Ingrese Tasa Mensual' value={monthlyRate} readOnly/>
+                <div className='col-2'>
+                    <InputText type='text' name='annualRate' placeholder='Ingrese Tasa Anual' value={annualRate} onChange={handlerAnnualRate}/>
+                </div>
+                <div className='col-2'>
+                    <InputText type='text' name='monthlyRate' placeholder='Tasa Mensual' value={monthlyRate} readOnly/>
+                </div>
             </div>
             <div className='box'>
                 <Button text="Calcular" type="submit"></Button>
