@@ -5,16 +5,17 @@ import BoxForm from './Components/box-form';
 import BoxResponse from './Components/box-response';
 
 function App() {
-  const [amount,setAmount] = useState(0)
-  const [months,setMonths] = useState(0)
-  const [monthly,setMonthly] = useState(0)
-  const [annualRate,setAnnualRate] = useState(0)
-  const [monthlyRate,setMonthlyRate] = useState(0)
+  const [amount,setAmount] = useState("")
+  const [months,setMonths] = useState("")
+  const [monthly,setMonthly] = useState("")
+  const [annualRate,setAnnualRate] = useState("")
+  const [monthlyRate,setMonthlyRate] = useState("")
   const [headers, setHeaders] = useState([])
   const [dataInterest, setDataInterest] = useState([])
 
+
   useEffect(() => {
-    if(months !== 0){
+    if(months !== ""){
       const monthly = parseFloat(amount / months).toFixed(2);
       setMonthly(monthly)
     }
@@ -22,14 +23,14 @@ function App() {
   },[amount,months]);
 
   useEffect(() =>{
-    if(annualRate !== 0){
+    if(annualRate !== ""){
       const monthlyRate = parseFloat(annualRate / 12 ).toFixed(2)
       setMonthlyRate(monthlyRate)
     }
     
   },[annualRate])
 
-
+  
   return (
     <div className="App">
       <Layout>
@@ -44,6 +45,8 @@ function App() {
             setMonthly={setMonthly}
             setAnnualRate={setAnnualRate}
             setMonthlyRate={setMonthlyRate}
+            setHeaders={setHeaders}
+            setDataInterest= {setDataInterest}
           />
         <BoxResponse
           headers={headers}

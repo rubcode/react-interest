@@ -3,11 +3,12 @@ import styled from 'styled-components'
 const TheadStyled = styled.thead`
 
     background-color: var(--primaryColor);
-    thead tr{
+    tr{
         border-block-end: 1px solid var(--grey);
     }
-    thead th{
-        padding: 1rem;
+    th{
+        padding-inline: 1rem;
+        text-align: center;
     }
 `
 
@@ -16,9 +17,7 @@ function Thead({headers}) {
         <TheadStyled>
             <tr key={0}>
                 {
-                    headers.foreach((item,index) => {       
-                        <td key={index}>{item}</td>
-                    })
+                    headers.map((item,index) => <th key={index}>{item}</th>)
                 }
             </tr>
         </TheadStyled>
