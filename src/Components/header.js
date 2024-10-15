@@ -6,7 +6,7 @@ const HeaderStyled = styled.header`
     justify-content: space-between;
     align-items: center;
     height: 90px;
-    background-color: var(--white);
+    background-color: var(--buttonBg);
     padding: 1rem;
 `
 

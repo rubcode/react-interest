@@ -5,13 +5,21 @@ const GlobalStylesStyled = createGlobalStyle`
         --bg: #1C2431;
         --buttonBg: #202A3C;
         --primaryColor: #2ACFCF;
+        --lightPrimaryColor: #AEF6F6;
         --accentColor : #003694;
         --white : #ffffef;
+        --colorFont: #ffffef;
         --grey: #fafafa ;
+        --greyDarken: #eeeeee ;
         --bodyRegular: 400 1rem Poppins;
         --bodyRegularSemiBold: 500 1.2rem Poppins;
         --titleFont: 600 1.5rem Poppins;
 
+    }
+    [data-theme="dark"] {
+        --bg: #E7FEFE ;
+        --buttonBg: #ffffef;
+        --colorFont: #111111;
     }
     body {
         background: var(--bg);

@@ -4,6 +4,7 @@ import Layout from './Components/layout';
 import BoxForm from './Components/box-form';
 import BoxResponse from './Components/box-response';
 import Header from './Components/header';
+import CheckDark from './Components/check-dark';
 
 function App() {
   const [amount,setAmount] = useState("")
@@ -36,6 +37,7 @@ function App() {
     <div className="App">
       <Header>
         <a href='https://www.rubrivero.com/' target='blank'><img className='logo' src='images/logo.png' alt='Rub Rivero logo'/></a>
+        <CheckDark/>
       </Header>
       <h1 className='title'>Calculadora Interés Compuesto</h1>
       <Layout>

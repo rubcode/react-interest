@@ -9,6 +9,7 @@ const TbodyStyled = styled.tbody`
         padding-inline: 1rem;
         padding-block: .5rem;
         text-align: center;
+        color: var(--colorFont);
     }
 `
 
