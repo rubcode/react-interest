@@ -61,12 +61,15 @@ const CheckDarkStyled = styled.div`
     }
 `
 
-function CheckDark() {
+function CheckDark({setTheme}) {
     function handlerChange(e){
         if (e.target.checked) {
             document.documentElement.setAttribute('data-theme', 'dark');
+            setTheme('ligth')
         } else {
             document.documentElement.setAttribute('data-theme', 'light');
+            setTheme('dark')
+            
         }
     }
     return (

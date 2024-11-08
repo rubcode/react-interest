@@ -17,7 +17,7 @@ const GlobalStylesStyled = createGlobalStyle`
 
     }
     [data-theme="dark"] {
-        --bg: #E7FEFE ;
+        --bg: #E9F5FF;
         --buttonBg: #ffffef;
         --colorFont: #111111;
     }

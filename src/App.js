@@ -14,6 +14,7 @@ function App() {
   const [monthlyRate,setMonthlyRate] = useState("")
   const [headers, setHeaders] = useState([])
   const [dataInterest, setDataInterest] = useState([])
+  const [theme, setTheme] = useState("dark")
 
 
   useEffect(() => {
@@ -32,12 +33,19 @@ function App() {
     
   },[annualRate])
 
-  
+  let pathLogo = 'images/logo.png'
+
+  if(theme === "dark"){
+    pathLogo = 'https://www.rubrivero.com/img/logo_cyan.png'
+  }
+
   return (
     <div className="App">
       <Header>
-        <a href='https://www.rubrivero.com/' target='blank'><img className='logo' src='images/logo.png' alt='Rub Rivero logo'/></a>
-        <CheckDark/>
+        <a href='https://www.rubrivero.com/' target='blank'><img className='logo' src={pathLogo} alt='Rub Rivero logo'/></a>
+        <CheckDark
+          setTheme={setTheme}
+        />
       </Header>
       <h1 className='title'>Calculadora Interés Compuesto</h1>
       <Layout>

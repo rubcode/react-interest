@@ -7,6 +7,7 @@ const HeaderStyled = styled.header`
     align-items: center;
     height: 90px;
     background-color: var(--buttonBg);
+    box-shadow: 0 1px #161a251a;
     padding: 1rem;
 `
 

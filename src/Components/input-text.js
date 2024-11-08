@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const InputText = styled.input`
-    border: 1px solid var(--buttonBg);
+    border: 1px solid #202A3C;
     color: var(--colorFont);
     background: var(--buttonBg);
     padding-inline: 1rem;

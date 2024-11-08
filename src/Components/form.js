@@ -34,6 +34,8 @@ function Form({amount,months,monthly,annualRate,monthlyRate,setAmount,setMonths,
         setMonthly("");
         setAnnualRate("");
         setMonthlyRate("");
+        setDataInterest([])
+        setHeaders([])
     }
 
     function handlerAmount(event){
